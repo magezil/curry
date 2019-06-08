@@ -1,0 +1,13 @@
+{
+  "name": "CurryTakeHomeProblem",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node ./test-curry.js"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.8.0",
+    "yarn": "1.13.0"
+  },
+  "private": true
+}
