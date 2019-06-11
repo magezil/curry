@@ -1,12 +1,13 @@
-
-function curry(func, args_param=[]) {
+function curry(func) {
     return function () {
-        const args = args_param.concat([...arguments]);
-        if (func.length <= args.length) {
-            temp = func.apply(null, args);
+        const fn_args = [...arguments]
+        // Return value if enough args have been passed in.
+        if (func.length <= fn_args.length) {
+            temp = func.apply(null, fn_args);
             return temp;
         }
-        return curry(func, args);
+        // Return function to take in additional values otherwise.
+        return curry(func.bind(null, ...fn_args))
     }
 }
 
